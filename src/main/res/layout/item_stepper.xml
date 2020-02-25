@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+<variable
+    name="step"
+    type="com.lilac.reedbi_seller.ui.test.StepperModel" />
+        <import type="com.lilac.reedbi_seller.ui.test.StepIndex"/>
+        <import type="android.view.View"/>
+    </data>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <View
+        android:layout_width="10dp"
+        android:layout_height="1dp"
+        android:visibility="@{step.index==StepIndex.START?View.GONE:View.VISIBLE}"
+        android:background="@color/grey_0"/>
+<androidx.appcompat.widget.AppCompatCheckBox
+    android:id="@+id/step_check"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/check"
+    android:padding="8dp"
+    android:textSize="12sp"
+    android:text="@{step.title}"
+    android:checked="@{step.selected}"
+    android:button="@null"
+    android:textColor="@drawable/check_text"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+    <View
+        android:layout_width="10dp"
+        android:layout_height="1dp"
+        android:visibility="@{step.index==StepIndex.END?View.GONE:View.VISIBLE}"
+        android:background="@color/grey_0"/>
+<!--    <androidx.appcompat.widget.AppCompatCheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/check"-->
+<!--        android:buttonTint="@color/colorPrimary"-->
+<!--        android:padding="8dp"-->
+<!--        android:textSize="12sp"-->
+<!--        android:text="Artibutes/Offers"-->
+<!--        android:checked="true"-->
+<!--        android:button="@null"-->
+<!--        android:textColor="@drawable/check_text"-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android" />-->
+<!--    <View-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/grey_0"/>-->
+<!--    <androidx.appcompat.widget.AppCompatCheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/check"-->
+<!--        android:buttonTint="@color/colorPrimary"-->
+<!--        android:padding="8dp"-->
+<!--        android:text="Media"-->
+<!--        android:textSize="12sp"-->
+
+<!--        android:button="@null"-->
+<!--        android:textColor="@drawable/check_text"-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android" />-->
+<!--    <View-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/grey_0"/>-->
+<!--    <androidx.appcompat.widget.AppCompatCheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/check"-->
+<!--        android:buttonTint="@color/colorPrimary"-->
+<!--        android:padding="8dp"-->
+<!--        android:text="Preview"-->
+<!--        android:textSize="12sp"-->
+
+<!--        android:button="@null"-->
+<!--        android:textColor="@drawable/check_text"-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android" />-->
+</LinearLayout>
+</layout>
